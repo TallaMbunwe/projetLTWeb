@@ -1,0 +1,15 @@
+<p>salarier-details works!</p>
+
+<div *ngIf="salarier"> 
+
+    <h2>{{salarier.nom | uppercase}} Details</h2>
+    <div><span>id: </span>{{salarier.id}}</div>
+    <div>
+      <label>nom:
+        <input [(ngModel)]="salarier.nom" placeholder="nom"/>
+      </label>
+    </div>
+
+    <button (click)="goBack()">go back</button>
+    
+</div>

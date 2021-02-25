@@ -1,0 +1,28 @@
+
+<!-- <h2>Details {{salarier.nom}} </h2>
+
+<div>
+    <label>name:
+      <input [(ngModel)]="salarier.nom" placeholder="nom"/>
+    </label>
+  </div> -->
+
+
+
+<h2> NOS SALARIEÈS </h2>
+<ul class="salariers">
+  <!-- <li *ngFor="let salarier of salariers" 
+  (click)="onSelect(salarier)" 
+  [class.selected]="salarier === selectedSalarier" >
+    <span class="badge">{{salarier.id}}</span> {{salarier.nom}} 
+  </li> -->
+  
+    <li *ngFor="let salarier of salariers">
+      <a routerLink="/detail/{{salarier.id}}">
+        <span class="badge">{{salarier.id}}</span> {{salarier.nom}}
+      </a>
+    </li>
+
+</ul>
+
+<app-salarier-details [salarier]="selectedSalarier"> </app-salarier-details>

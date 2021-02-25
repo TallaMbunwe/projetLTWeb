@@ -1,0 +1,9 @@
+<p>dashboard works!</p>
+<h3>Nos Salariers</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let salarier of salariers" class="col-1-4" routerLink="/detail/{{salarier.id}}">
+    <div class="module salarier">
+      <h4>{{salarier.nom}}</h4>
+    </div>
+  </a>
+</div>
