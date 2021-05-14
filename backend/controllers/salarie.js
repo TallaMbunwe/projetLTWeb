@@ -41,7 +41,10 @@ exports.login = (req, res, next) => {
               'RANDOM_TOKEN_SECRET',
               { expiresIn: '24h' }
             );
-          
+          // on retourne le tocken au frontend
+          //console.log(token);
+          //
+          console.log('Oui je suis existant la BD', req.body);
             res.status(200).json({
               salarieId: fetchedUser._id,
               token: token

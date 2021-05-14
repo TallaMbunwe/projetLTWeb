@@ -10,16 +10,16 @@
     
     <span class="nav-tool-items">
      <ul>
-        <li>
-            <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+        <li *ngIf="!userIsAuthenticated" > 
+            <a mat-button mat-raised-button routerLink="login" routerLinkActive="active">Log in</a>
         </li>
-        <!-- <li>
-            <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a> 
-        </li> -->
-        <li>
-          <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Dashboard</a> 
+        <li *ngIf="userIsAuthenticated" >
+            <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Créer compte</a> 
+        </li> 
+        <li *ngIf="userIsAuthenticated" >
+          <a mat-button mat-raised-button routerLink="dashboard" routerLinkActive="active">Dashboard</a> 
         </li>
-        <li>
+        <li *ngIf="userIsAuthenticated" >
           <button mat-button > Logout</button>
         </li>
     </ul>

@@ -9,12 +9,11 @@ import { SalarierDetailsComponent } from './salarier-details/salarier-details.co
 
 const routes: Routes = [
   
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  //{ path: '', pathMatch: 'full', redirectTo: 'register' },
   { path: 'salarier', component: SalarierComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: SalarierDetailsComponent },
-  
-  // { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent }
 

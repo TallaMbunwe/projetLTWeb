@@ -33,17 +33,4 @@ export class LoginComponent implements OnInit {
 
   isLoading = false;
   
-  // interface userdetails {
-  //   userMail: string,
-  //   userPwd: string
-  // }
-
-  // onLogin(form: NgForm){
-  //   console.log(form.value.email);
-  //    const mydata = {
-  //     emailSalarie:form.value.email,
-  //     motdepasse: form.value.password
-  //   };
-  //   this._httpclient.post/*<userdetails>*/(this.apitesturl,mydata).subscribe(resp => {console.log(resp)});
-  // }
 }

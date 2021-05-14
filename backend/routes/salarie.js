@@ -6,32 +6,11 @@ const salarieCtrl = require('../controllers/salarie');
 
 const Salarie = require('../models/salarie');
 
- router.post('/signup', salarieCtrl.signup);
+// import du middleware auth
+const auth =require('../middleware/auth');
 
-// router.post('/signup', (req, res, next) => { 
-//     const bdsal = Salarie.find({});
-//     console.log(bdsal);
-//     bcrypt.hash(req.body.password, 10)
-//     .then(hash =>{
-//         const salarie = new Salarie({
-//             email: req.body.email,
-//             password: hash
-//         });
-//         salarie.save()
-//         .then(result =>{ res.status(201).json({
-//             message: 'Salarier crée!',
-//             result: result
-//         });
-//     })
-//     .catch(err => {
-//         res.status(500).json({
-//             error: err
-//         })
-//     })
-
-//     })
-    
-// });
+ //router.post('/signup', auth, salarieCtrl.signup);
+ router.post('/register', salarieCtrl.signup);
 
 router.post('/login', salarieCtrl.login);
 

@@ -8,5 +8,11 @@
 
 ul{
       display: flex;
+      color: white;
+      font-size: 14px;
+      grid-area: header;
+      text-align: center;
+      background-color: #FA7D44;
   }
+  
   

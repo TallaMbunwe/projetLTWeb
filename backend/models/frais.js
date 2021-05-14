@@ -6,13 +6,7 @@ const fraisSchema = mongoose.Schema({
   libelleFrais: { type: String, required: true },
   dateInitialise: { type: String, required: true },
   preuveFrais: { type: String, required: true },
-  // mission: [{
-  //   idMission: {type: String },
-  //   nomMission: {type: String },
-  //   montantEstime: {type: Number }
-  // }],
-  // {timestamps: true}
-
+  
 });
 
 module.exports = mongoose.model('Frais', fraisSchema);

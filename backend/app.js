@@ -8,8 +8,9 @@ const stuffRoutes =require ('./routes/stuff');
 //importation des routes de salarie
 const salarieRoutes = require ('./routes/salarie');
 
-
+//WCgrWYmXgzFz992/
 mongoose.connect('mongodb+srv://libosso_21:Tall@dmin.@cluster0.tdbcv.mongodb.net/<dbname>?retryWrites=true&w=majority',
+
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
